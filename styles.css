@@ -1,0 +1,182 @@
+/* Paleta de colores naranja
+
+titulos: #ff6600, #ff8c00
+fondos: #fff5e6, #ffe4cc, #ffecd9
+textos: #cc5500, #b35900, #994d00
+*/
+
+/* Estilos generales del body */
+body {
+    background-color: #fff5e6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo para el titulo principal */
+h1 {
+    color: #ff6600;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 140, 0, 0.3);
+}
+
+/* Pseudoelemento - agrega una linea decorativa despues del h1 */
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ff8c00;
+    margin: 10px auto;
+}
+
+/* Estilos para subtitulos */
+h2 {
+    color: #ff8c00;
+    border-left: 5px solid #ff6600;
+    padding-left: 15px;
+    margin-top: 30px;
+}
+
+/* Pseudoelemento - icono antes de cada h2 */
+h2::before {
+    content: "🔸 ";
+}
+
+/* Estilo para parrafos */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    color: #cc5500;
+}
+
+/* Estilo para la imagen */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 3in;
+    border: 0.5cm solid #ff8c00;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.4);
+}
+
+/* Pseudoclase - efecto hover en la imagen */
+img:hover {
+    border-color: #ff6600;
+}
+
+/* Estilos para listas desordenadas */
+ul {
+    background-color: #ffe4cc;
+    padding: 20px;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+/* Pseudoelemento - agregar emoji antes de cada item de la lista */
+ul li::before {
+    content: "⚡ ";
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* Estilo para items de lista desordenada */
+ul li {
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #b35900;
+}
+
+/* Pseudoclase - efecto hover en items de lista */
+ul li:hover {
+    background-color: #ffd4a3;
+    padding-left: 15px;
+    transition: all 0.2s ease;
+}
+
+/* Estilos para listas ordenadas */
+ol {
+    background-color: #ffecd9;
+    padding: 20px;
+    border-radius: 10px;
+    counter-reset: mi-contador;
+    list-style: none;
+}
+
+/* Estilo para items de lista ordenada */
+ol li {
+    padding: 10px;
+    margin: 8px 0;
+    color: #994d00;
+    position: relative;
+    padding-left: 40px;
+}
+
+/* Pseudoelemento - contador personalizado para la lista ordenada */
+ol li::before {
+    counter-increment: mi-contador;
+    content: counter(mi-contador);
+    background-color: #ff6600;
+    color: white;
+    font-weight: bold;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    left: 5px;
+}
+
+/* Pseudoclase - efecto hover en items de lista ordenada */
+ol li:hover {
+    background-color: #ffd9b3;
+    border-left: 4px solid #ff6600;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para enlaces */
+a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Pseudoclase - efecto hover en enlaces */
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Pseudoclase - enlaces visitados */
+a:visited {
+    color: #cc5500;
+}
+
+/* Pseudoclase - enlaces activos al hacer clic */
+a:active {
+    color: #ff8c00;
+}
+
+/* Pseudoclase - primer item de la lista tiene estilo especial */
+ol li:first-child {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Pseudoclase - ultimo item de lista desordenada con estilo especial */
+ul li:last-child {
+    background-color: #ffcc99;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+em {
+    color: #b35900;
+    font-weight: bold;
+}
